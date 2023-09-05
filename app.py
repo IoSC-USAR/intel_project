@@ -5,10 +5,17 @@ from PIL import Image
 from io import BytesIO
 from streamlit_lottie import st_lottie
 
+<<<<<<< HEAD
 
 model = tf.keras.applications.MobileNetV2(weights="imagenet")
 
 
+=======
+# Load a pre-trained MobileNetV2 model for image classification
+model = tf.keras.applications.MobileNetV2(weights="imagenet")
+
+# Set the page title and add some custom CSS
+>>>>>>> siddharth/api_integrate
 def load_lottieurl(url):
     r = requests.get(url)
     return r.json()
@@ -48,12 +55,27 @@ def recognize_image(image):
 
 
 
+<<<<<<< HEAD
 
+=======
+# Upload an image
+>>>>>>> siddharth/api_integrate
 
 st_lottie(lottie_AI, height = 500)
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
 if uploaded_image is not None:
+<<<<<<< HEAD
+=======
+    # Send the image to the FastAPI server for prediction
+    files = {'file': ('image.jpg', uploaded_image.read(), 'image/jpeg')}
+    response = requests.post("http://localhost:8000/predict/", files=files)
+
+    if response.status_code == 200:
+        result = response.json()
+        class_name = result["class_name"]
+
+>>>>>>> siddharth/api_integrate
 
     st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
     st.write("")
@@ -64,6 +86,15 @@ if uploaded_image is not None:
         prediction = recognize_image(uploaded_image)
 
     # Display the top 5 predictions
+<<<<<<< HEAD
     st.subheader("Top 5 Predictions:")
     for item in prediction:
         st.write(f"{item[1]}: {item[2]:.2%}")
+=======
+    if class_name == "pneumonia":
+        st.subheader(f"Pneumonia Detected")
+    else:
+        st.subheader(f"Pneumonia not detected")
+    
+
+>>>>>>> siddharth/api_integrate
