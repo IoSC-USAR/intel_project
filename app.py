@@ -13,7 +13,6 @@ def load_lottieurl(url):
     r = requests.get(url)
     return r.json()
 
-
 lottie_AI = load_lottieurl("https://lottie.host/532607d4-7bdd-4a68-be08-4f925ba64844/BfB1Ai3Gcz.json")
 
 st.set_page_config(
@@ -43,15 +42,28 @@ def recognize_image(image):
     # Predict the image
     prediction = model.predict(img)
     decoded_prediction = tf.keras.applications.mobilenet_v2.decode_predictions(prediction)
-    
+
     return decoded_prediction[0]
 
-
-
 # Upload an image
-
-st_lottie(lottie_AI, height = 500)
+st_lottie(lottie_AI, height=500)
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
+
+st.markdown("## Enter your symptoms:")
+user_text = st.text_area("", "")
+# user_text = st.text_area("Enter your symptoms:", "")
+
+# Add a submit button
+if st.button("Submit", key="submit_button"):
+    # Send the user input text to the FastAPI server for processing
+    payload = {"text": user_text}
+    response = requests.post("http://localhost:8000/process_text/", json=payload)
+
+    if response.status_code == 200:
+        result = response.json()
+        # Display the result from the server
+        st.write("Server Response: likh dena bhai yaha jo dikhana ho")
+        st.write(result)
 
 if uploaded_image is not None:
     # Send the image to the FastAPI server for prediction
@@ -61,7 +73,6 @@ if uploaded_image is not None:
     if response.status_code == 200:
         result = response.json()
         class_name = result["class_name"]
-
 
     st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
     st.write("")
@@ -76,4 +87,3 @@ if uploaded_image is not None:
         st.subheader(f"Pneumonia Detected")
     else:
         st.subheader(f"Pneumonia not detected")
-    
