@@ -92,7 +92,7 @@ This project implements a healthcare detector that combines a Convolutional Neur
 
 + **Hardware acceleration:** IPEX takes advantage of Intel-specific hardware acceleration capabilities, making the most of Intel CPUs for both CNN and RNN-based detectors.
 
-##**Project Objectives** ⚔️
+### Project Objectives ⚔️
 
 + **X-ray Pneumonia Detector:** The CNN-based detector aims to identify pneumonia in chest X-ray images, contributing to early diagnosis and treatment.
 
@@ -100,7 +100,7 @@ This project implements a healthcare detector that combines a Convolutional Neur
 
 + **Intel Optimization:** The project prioritizes the use of Intel oneAPI libraries to optimize the performance and efficiency of the detectors on Intel hardware.
 
-**##Usage**
+### Usage
 
 Follow the provided documentation and instructions to set up and run the X-ray Pneumonia Detector and NLP Disease Detector. Ensure you have the required dependencies, including Python 3.x, PyTorch, Intel oneAPI libraries, and access to suitable medical datasets for training and testing.
 
