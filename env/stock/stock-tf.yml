@@ -13,3 +13,5 @@ dependencies:
     - fastapi==0.103.1
     - pandas==2.1.0
     - tensorflow-hub==0.14.0
+    - streamlit
+    - streamlit-lottie

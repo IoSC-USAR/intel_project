@@ -23,9 +23,7 @@ st.set_page_config(
 
 # custom CSS for styling
 def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
+    with open(file_name) as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 local_css("styles.css")
 
 st.title("Healthcare AI")
@@ -40,7 +38,7 @@ if st.button("Submit", key="submit_button"):
     # Send the user input text to the FastAPI server for processing
     payload = user_text
     headers = {"Accept": "application/json", "Content-Type": "application/json"}  # Set headers
-    response_symptoms = requests.post("http://localhost:8000/predict_symptoms/", json=payload, headers=headers)
+    response_symptoms = requests.post("http://0.0.0.0:8000/predict_symptoms/", json=payload, headers=headers)
 
     if response_symptoms.status_code == 200:
         result_symptoms = response_symptoms.json()
@@ -76,7 +74,7 @@ uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "png", "jpe
 if uploaded_image is not None:
     # Send the image to the FastAPI server for prediction
     files = {'file': ('image.jpg', uploaded_image.read(), 'image/jpeg')}
-    response = requests.post("http://localhost:8000/predict/", files=files)
+    response = requests.post("http://0.0.0.0:8000/predict/", files=files)
 
     if response.status_code == 200:
         result = response.json()
