@@ -1,6 +1,6 @@
 # 🏥 Healthcare AI Companion
 
-![Frontend of the site](intel_project/frontend.jpeg)
+![Frontend of the site](/frontend.jpeg)
 
 **The Healthcare AI Companion is an intelligent healthcare tool that combines advanced deep learning models for image classification and text-based symptom analysis. This tool helps in the early detection of diseases based on X-ray images and symptom descriptions. It utilizes state-of-the-art deep learning models and Intel's oneAPI libraries for optimization.**
 
