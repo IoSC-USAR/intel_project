@@ -8,8 +8,8 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import logging 
-from daal4py import normalization_zscore
-from daal4py.dnn import PredictionTopology, PredictionModel, Engine
+from daal4py import normalization_zscore #Intel oneDAL (Data Analytics Library)
+from daal4py.dnn import PredictionTopology, PredictionModel, Engine #Intel oneAPI DNNL (Deep Neural Network Library)
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
