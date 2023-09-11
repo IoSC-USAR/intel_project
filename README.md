@@ -5,7 +5,7 @@
 **The Healthcare AI Companion is an intelligent healthcare tool that combines advanced deep learning models for image classification and text-based symptom analysis. This tool helps in the early detection of diseases based on X-ray images and symptom descriptions. It utilizes state-of-the-art deep learning models and Intel's oneAPI libraries for optimization.**
 
 ## ✨ Features
-- **🖼️ Image Classification:** Upload chest X-ray images to detect pneumonia using a pre-trained MobileNetV2 model.
+- **🖼️ Image Classification:** Upload chest X-ray images to detect pneumonia using a pre-trained tensorflow cnn  model.
 - **💬 Symptom Analysis:** Enter symptoms as text, and the tool provides predictions for the top three likely diseases.
 - **🧠 Deep Learning:** Utilizes Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) models for accurate predictions.
 - **🚀 Intel Optimization:** Optimized using Intel oneAPI libraries for efficient performance on Intel hardware.
@@ -20,21 +20,20 @@ The frontend of this tool is built using Streamlit, a user-friendly Python libra
 
 ## ⚙️ Installation
 1. **Clone this GitHub repository:**
-
    ```bash
    git clone https://github.com/yourusername/healthcare-ai-companion.git
    cd healthcare-ai-companion
 
-Install the required Python packages:
+2. **Install the required Python packages:**
+   ```bash
+   pip install tensorflow
+   pip install numpy
+   pip install pandas
+   pip install opencv-python
 
-bash
-
-pip install -r requirements.txt
-Start the Streamlit frontend:
-
-bash
-
-streamlit run app.py
+3. **Start the Streamlit frontend: (Recommended after installing the API toolkits)**
+   ```bash
+   streamlit run app.py
 
 ## 🧰 AI Toolkit (FastAPI and Deep Learning Models)
 
@@ -49,17 +48,17 @@ The backend of this tool is powered by FastAPI, a modern web framework for build
 
 ### ⚙️ Installation
 
-Install FastAPI and Uvicorn:
+1. **Install FastAPI and Uvicorn:**
 
-bash
+   ```bash
+   pip install fastapi uvicorn
 
-pip install fastapi uvicorn
-Start the FastAPI backend:
+2. **Start the FastAPI backend:**
 
-bash
+   ```bash
+   uvicorn api_testing:app --reload
 
-uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
-Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed as mentioned in the project documentation.
+Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed.
 
 ## 🧬 Deep Learning Healthcare Detector
 
