@@ -57,14 +57,20 @@ user_text = st.text_area("", "")
 if st.button("Submit", key="submit_button"):
     # Send the user input text to the FastAPI server for processing
     payload = {"text": user_text}
-    response = requests.post("http://localhost:8000/process_text/", json=payload)
+    headers = {"Accept": "application/json", "Content-Type": "application/json"}  # Set headers
+    response_symptoms = requests.post("http://localhost:8000/predict_symptoms/", json=payload, headers=headers)
 
-    if response.status_code == 200:
-        result = response.json()
+    if response_symptoms.status_code == 200:
+        result_symptoms = response_symptoms.json()
+        top_three_diseases = result_symptoms.get("top_three_diseases")
+
         # Display the result from the server
-        st.write("Server Response: likh dena bhai yaha jo dikhana ho")
-        st.write(result)
-
+        if top_three_diseases:
+            st.subheader("Top Three Predicted Diseases:")
+            for i, disease in enumerate(top_three_diseases):
+                st.write(f"{i+1}. {disease}")
+        else:
+            st.write("No diseases were predicted.")
 if uploaded_image is not None:
     # Send the image to the FastAPI server for prediction
     files = {'file': ('image.jpg', uploaded_image.read(), 'image/jpeg')}
@@ -74,7 +80,7 @@ if uploaded_image is not None:
         result = response.json()
         class_name = result["class_name"]
 
-    st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
+    st.image(uploaded_image, caption='Uplo  aded Image', use_column_width=True)
     st.write("")
 
     # Add a loading message
