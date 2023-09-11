@@ -55,7 +55,7 @@ The backend of this tool is powered by FastAPI, a modern web framework for build
    ```bash
    uvicorn api_testing:app --reload
 
-Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed as mentioned in the project documentation.
+Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed.
 
 ## 🧬 Deep Learning Healthcare Detector
 
