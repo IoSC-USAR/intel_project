@@ -5,7 +5,7 @@
 **The Healthcare AI Companion is an intelligent healthcare tool that combines advanced deep learning models for image classification and text-based symptom analysis. This tool helps in the early detection of diseases based on X-ray images and symptom descriptions. It utilizes state-of-the-art deep learning models and Intel's oneAPI libraries for optimization.**
 
 ## ✨ Features
-- **🖼️ Image Classification:** Upload chest X-ray images to detect pneumonia using a pre-trained MobileNetV2 model.
+- **🖼️ Image Classification:** Upload chest X-ray images to detect pneumonia using a pre-trained tensorflow cnn  model.
 - **💬 Symptom Analysis:** Enter symptoms as text, and the tool provides predictions for the top three likely diseases.
 - **🧠 Deep Learning:** Utilizes Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) models for accurate predictions.
 - **🚀 Intel Optimization:** Optimized using Intel oneAPI libraries for efficient performance on Intel hardware.
