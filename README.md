@@ -40,13 +40,14 @@ streamlit run app.py
 
 The backend of this tool is powered by FastAPI, a modern web framework for building APIs. It uses deep learning models for image classification and symptom analysis.
 
-**## 🛠️ Technologies Used**
-#Intel oneDNN (Deep Neural Network Library): Optimizes CNN and LSTM layers for efficient disease detection.
-#Intel oneDAL (Data Analytics Library): Provides data preprocessing and feature engineering capabilities.
-#IPEX (Intel Extension for PyTorch): Optimizes model training and accelerates deep learning workloads on Intel CPUs.
+### 🛠️ Technologies Used
+
++ **Intel oneDNN (Deep Neural Network Library):** Optimizes CNN and LSTM layers for efficient disease detection.
++ **Intel oneDAL (Data Analytics Library):** Provides data preprocessing and feature engineering capabilities.
++ **IPEX (Intel Extension for PyTorch):** Optimizes model training and accelerates deep learning workloads on Intel CPUs.
 
 
-**⚙️ Installation**
+### ⚙️ Installation
 
 Install FastAPI and Uvicorn:
 
