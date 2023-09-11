@@ -49,7 +49,7 @@ The backend of this tool is powered by FastAPI, a modern web framework for build
 
 ### ⚙️ Installation
 
-+ Install FastAPI and Uvicorn:
+##### Install FastAPI and Uvicorn:
 
 bash
 
