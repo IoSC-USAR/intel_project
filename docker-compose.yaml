@@ -1,18 +1,21 @@
-version: '3'
+version: "2"
 services:
   frontend:
-    name: frontend
+    name: 
+      - frontend
     build: 
       context: .
       dockerfile: ./docker/frontend/Dockerfile
     ports: 
       - '8501:8501'
     restart: always
-    depends-on: backend
+    depends-on: 
+      - backend
     network_mode: bridge
 
   backend:
-    name: backend
+    name: 
+      - backend
     build: 
       context: .
       dockerfile: ./docker/backend/Dockerfile
