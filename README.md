@@ -20,21 +20,17 @@ The frontend of this tool is built using Streamlit, a user-friendly Python libra
 
 ## ⚙️ Installation
 1. **Clone this GitHub repository:**
-
    ```bash
    git clone https://github.com/yourusername/healthcare-ai-companion.git
    cd healthcare-ai-companion
 
-Install the required Python packages:
+2. **Install the required Python packages:**
+   ```bash
+   pip install -r requirements.txt
 
-bash
-
-pip install -r requirements.txt
-Start the Streamlit frontend:
-
-bash
-
-streamlit run app.py
+3. **Start the Streamlit frontend:**
+   ```bash
+   streamlit run app.py
 
 ## 🧰 AI Toolkit (FastAPI and Deep Learning Models)
 
