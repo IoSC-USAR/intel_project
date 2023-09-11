@@ -45,16 +45,16 @@ The backend of this tool is powered by FastAPI, a modern web framework for build
 
 ### ⚙️ Installation
 
-##### Install FastAPI and Uvicorn:
+1. **Install FastAPI and Uvicorn:**
 
-bash
+   ```bash
+   pip install fastapi uvicorn
 
-pip install fastapi uvicorn
-Start the FastAPI backend:
+2. **Start the FastAPI backend:**
 
-bash
+   ```bash
+   uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
 
-uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
 Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed as mentioned in the project documentation.
 
 ## 🧬 Deep Learning Healthcare Detector
