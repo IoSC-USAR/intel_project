@@ -1,10 +1,10 @@
-FROM docker.io/hdgigante/python-opencv
+FROM docker.io/python:latest
 
-RUN dnf install python python-pip -y
 WORKDIR /usr/src/app
 
 COPY ./requirements.txt ./requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
+
 
 COPY . .
 
