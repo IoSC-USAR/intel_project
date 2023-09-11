@@ -86,18 +86,18 @@ Mixed-precision training: With IPEX, mixed-precision training can be enabled, le
 Hardware acceleration: IPEX takes advantage of Intel-specific hardware acceleration capabilities, making the most of Intel CPUs for both CNN and RNN-based detectors.
 
 **Project Objectives** ⚔️
-X-ray Pneumonia Detector: The CNN-based detector aims to identify pneumonia in chest X-ray images, contributing to early diagnosis and treatment.
+**X-ray Pneumonia Detector:** The CNN-based detector aims to identify pneumonia in chest X-ray images, contributing to early diagnosis and treatment.
 
-NLP Disease Detector: The RNN-based NLP detector leverages natural language processing techniques to identify diseases based on symptom descriptions provided by patients.
+**NLP Disease Detector:** The RNN-based NLP detector leverages natural language processing techniques to identify diseases based on symptom descriptions provided by patients.
 
-Intel Optimization: The project prioritizes the use of Intel oneAPI libraries to optimize the performance and efficiency of the detectors on Intel hardware.
+**Intel Optimization:** The project prioritizes the use of Intel oneAPI libraries to optimize the performance and efficiency of the detectors on Intel hardware.
 
 Usage
 Follow the provided documentation and instructions to set up and run the X-ray Pneumonia Detector and NLP Disease Detector. Ensure you have the required dependencies, including Python 3.x, PyTorch, Intel oneAPI libraries, and access to suitable medical datasets for training and testing.
 
 
 🙏 Acknowledgments
-**Streamlit**
-**FastAPI**
-**PyTorch**
-**Intel oneAPI**
+-**Streamlit**
+-**FastAPI**
+-**PyTorch**
+-**Intel oneAPI**
