@@ -66,7 +66,7 @@ This project implements a healthcare detector that combines a Convolutional Neur
 
 **Technologies Used :-**
 
-__##Intel oneDNN (Deep Neural Network Library)__ 🧠
+### Intel oneDNN (Deep Neural Network Library) 🧠
 
 + Intel oneDNN, also known as MKL-DNN, is a powerful library designed to accelerate deep learning workloads. It provides optimized primitives for convolutional neural networks (CNNs), recurrent neural networks (RNNs), and other neural network operations. In this project, oneDNN is leveraged for:-
 
@@ -74,7 +74,7 @@ __##Intel oneDNN (Deep Neural Network Library)__ 🧠
 
 + **Enhancing RNN operations:** oneDNN optimizes recurrent layers, enabling efficient processing of sequential medical symptom data for disease detection.
 
-##**Intel oneDAL (Data Analytics Library)** 📊
+### Intel oneDAL (Data Analytics Library) 📊
 
 + Intel oneDAL is a versatile library for data preprocessing, transformation, and analysis. While it is not the primary focus of this project, oneDAL can be utilized for various data-related tasks, including:
 
@@ -82,7 +82,7 @@ __##Intel oneDNN (Deep Neural Network Library)__ 🧠
 
 + **Feature engineering:** The library offers tools for feature engineering, which can be vital for improving the accuracy of disease detection models.
 
-##**IPEX (Intel Extension for PyTorch)** 🔥
+### IPEX (Intel Extension for PyTorch) 🔥
 
 + IPEX is an extension for PyTorch that optimizes deep learning workloads on Intel hardware. It provides features for model optimization, mixed-precision training, and hardware-specific acceleration. In this project, IPEX plays a crucial role in:
 
@@ -105,7 +105,7 @@ __##Intel oneDNN (Deep Neural Network Library)__ 🧠
 Follow the provided documentation and instructions to set up and run the X-ray Pneumonia Detector and NLP Disease Detector. Ensure you have the required dependencies, including Python 3.x, PyTorch, Intel oneAPI libraries, and access to suitable medical datasets for training and testing.
 
 
-**###🙏Acknowledgments**
+### 🙏Acknowledgments
 
  + **Streamlit**
  + **FastAPI**
