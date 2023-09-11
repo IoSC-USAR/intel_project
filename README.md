@@ -53,7 +53,7 @@ The backend of this tool is powered by FastAPI, a modern web framework for build
 2. **Start the FastAPI backend:**
 
    ```bash
-   uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
+   uvicorn api_testing:app --reload
 
 Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed as mentioned in the project documentation.
 
