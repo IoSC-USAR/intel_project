@@ -64,7 +64,7 @@ This project implements a healthcare detector that combines a Convolutional Neur
 
 **Technologies Used**
 
-__Intel oneDNN (Deep Neural Network Library)__ 🧠
+##__Intel oneDNN (Deep Neural Network Library)__ 🧠
 
 Intel oneDNN, also known as MKL-DNN, is a powerful library designed to accelerate deep learning workloads. It provides optimized primitives for convolutional neural networks (CNNs), recurrent neural networks (RNNs), and other neural network operations. In this project, oneDNN is leveraged for:-
 
@@ -72,7 +72,7 @@ Optimizing CNN layers: oneDNN accelerates convolutional layers, improving the pe
 
 Enhancing RNN operations: oneDNN optimizes recurrent layers, enabling efficient processing of sequential medical symptom data for disease detection.
 
-**Intel oneDAL (Data Analytics Library)** 📊
+##**Intel oneDAL (Data Analytics Library)** 📊
 
 Intel oneDAL is a versatile library for data preprocessing, transformation, and analysis. While it is not the primary focus of this project, oneDAL can be utilized for various data-related tasks, including:
 
@@ -80,7 +80,7 @@ Data preprocessing: oneDAL can be employed to preprocess and clean medical datas
 
 Feature engineering: The library offers tools for feature engineering, which can be vital for improving the accuracy of disease detection models.
 
-**IPEX (Intel Extension for PyTorch)** 🔥
+##**IPEX (Intel Extension for PyTorch)** 🔥
 
 IPEX is an extension for PyTorch that optimizes deep learning workloads on Intel hardware. It provides features for model optimization, mixed-precision training, and hardware-specific acceleration. In this project, IPEX plays a crucial role in:
 
@@ -90,7 +90,7 @@ Mixed-precision training: With IPEX, mixed-precision training can be enabled, le
 
 Hardware acceleration: IPEX takes advantage of Intel-specific hardware acceleration capabilities, making the most of Intel CPUs for both CNN and RNN-based detectors.
 
-**Project Objectives** ⚔️
+##**Project Objectives** ⚔️
 
 **X-ray Pneumonia Detector:** The CNN-based detector aims to identify pneumonia in chest X-ray images, contributing to early diagnosis and treatment.
 
@@ -98,13 +98,18 @@ Hardware acceleration: IPEX takes advantage of Intel-specific hardware accelerat
 
 **Intel Optimization:** The project prioritizes the use of Intel oneAPI libraries to optimize the performance and efficiency of the detectors on Intel hardware.
 
-Usage
+##Usage
 
 Follow the provided documentation and instructions to set up and run the X-ray Pneumonia Detector and NLP Disease Detector. Ensure you have the required dependencies, including Python 3.x, PyTorch, Intel oneAPI libraries, and access to suitable medical datasets for training and testing.
 
 
-🙏 Acknowledgments
+###🙏 Acknowledgments
+
  -**Streamlit**
+ 
  -**FastAPI**
+ 
  -**PyTorch**
+ 
  -**Intel oneAPI**
+ 
