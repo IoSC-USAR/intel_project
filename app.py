@@ -16,8 +16,8 @@ def load_lottieurl(url):
 lottie_AI = load_lottieurl("https://lottie.host/532607d4-7bdd-4a68-be08-4f925ba64844/BfB1Ai3Gcz.json")
 
 st.set_page_config(
-    page_title="Image Recognition App",
-    page_icon="🖼️",
+    page_title="Healthcare AI",
+    page_icon=":hospital:",
     layout="wide"
 )
 
