@@ -109,6 +109,6 @@ Follow the provided documentation and instructions to set up and run the X-ray P
 
  + **Streamlit**
  + **FastAPI**
- + **PyTorch**
+ + **TensorFlow**
  + **Intel oneAPI**
  
