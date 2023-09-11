@@ -26,9 +26,12 @@ The frontend of this tool is built using Streamlit, a user-friendly Python libra
 
 2. **Install the required Python packages:**
    ```bash
-   pip install -r requirements.txt
+   pip install tensorflow
+   pip install numpy
+   pip install pandas
+   pip install opencv-python
 
-3. **Start the Streamlit frontend:**
+3. **Start the Streamlit frontend: (Recommended after installing the API toolkits)**
    ```bash
    streamlit run app.py
 
