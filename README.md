@@ -18,7 +18,7 @@ The frontend of this tool is built using Streamlit, a user-friendly Python libra
 
 2. **Upload X-ray Images:** You can also upload chest X-ray images (in JPG, PNG, or JPEG format) to check for pneumonia. The tool will classify the image and provide results.
 
--**⚙️ Installation**
+**⚙️ Installation**
 1. **Clone this GitHub repository:**
 
    ```bash
@@ -37,6 +37,7 @@ bash
 streamlit run frontend.py
 
 **## 🧰 AI Toolkit (FastAPI and Deep Learning Models)**
+
 The backend of this tool is powered by FastAPI, a modern web framework for building APIs. It uses deep learning models for image classification and symptom analysis.
 
 **## 🛠️ Technologies Used**
