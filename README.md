@@ -36,7 +36,7 @@ bash
 
 streamlit run frontend.py
 
-**## 🧰 AI Toolkit (FastAPI and Deep Learning Models)**
+## 🧰 AI Toolkit (FastAPI and Deep Learning Models)
 
 The backend of this tool is powered by FastAPI, a modern web framework for building APIs. It uses deep learning models for image classification and symptom analysis.
 
@@ -60,7 +60,7 @@ bash
 uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
 Make sure to have Python 3.x, PyTorch, and the required Intel oneAPI libraries installed as mentioned in the project documentation.
 
-##**🧬 Deep Learning Healthcare Detector**
+## 🧬 Deep Learning Healthcare Detector
 
 This project implements a healthcare detector that combines a Convolutional Neural Network (CNN)-based X-ray Pneumonia Detector and a Recurrent Neural Network (RNN)-based Natural Language Processing (NLP) Disease Detector. The detectors are optimized using Intel oneAPI libraries, including Intel oneDNN (Deep Neural Network Library), Intel oneDAL (Data Analytics Library), and IPEX (Intel Extension for PyTorch). The primary objectives of this project are to detect pneumonia in chest X-ray images and identify diseases based on symptoms using cutting-edge deep learning techniques fine-tuned and accelerated for Intel hardware.
 
