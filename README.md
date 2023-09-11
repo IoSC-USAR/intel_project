@@ -34,7 +34,7 @@ Start the Streamlit frontend:
 
 bash
 
-streamlit run frontend.py
+streamlit run app.py
 
 ## 🧰 AI Toolkit (FastAPI and Deep Learning Models)
 
