@@ -28,8 +28,31 @@ def local_css(file_name):
 
 local_css("styles.css")
 
-st.title("Image Recognition App")
-st.write("Upload an image to identify its contents.")
+st.title("Healthcare AI")
+st.write("Your healthcare AI Companion")
+
+st.markdown("## Enter your symptoms:")
+user_text = st.text_area("", "")
+# user_text = st.text_area("Enter your symptoms:", "")
+
+# Add a submit button
+if st.button("Submit", key="submit_button"):
+    # Send the user input text to the FastAPI server for processing
+    payload = user_text
+    headers = {"Accept": "application/json", "Content-Type": "application/json"}  # Set headers
+    response_symptoms = requests.post("http://localhost:8000/predict_symptoms/", json=payload, headers=headers)
+
+    if response_symptoms.status_code == 200:
+        result_symptoms = response_symptoms.json()
+        top_three_diseases = result_symptoms.get("top_three_diseases")
+
+        # Display the result from the server
+        if top_three_diseases:
+            st.subheader("Top Three Predicted Diseases:")
+            for i, disease in enumerate(top_three_diseases):
+                st.write(f"{i+1}. {disease}")
+        else:
+            st.write("No disease found")
 
 # Function to recognize the image
 def recognize_image(image):
@@ -49,28 +72,7 @@ def recognize_image(image):
 st_lottie(lottie_AI, height=500)
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
-st.markdown("## Enter your symptoms:")
-user_text = st.text_area("", "")
-# user_text = st.text_area("Enter your symptoms:", "")
 
-# Add a submit button
-if st.button("Submit", key="submit_button"):
-    # Send the user input text to the FastAPI server for processing
-    payload = {"text": user_text}
-    headers = {"Accept": "application/json", "Content-Type": "application/json"}  # Set headers
-    response_symptoms = requests.post("http://localhost:8000/predict_symptoms/", json=payload, headers=headers)
-
-    if response_symptoms.status_code == 200:
-        result_symptoms = response_symptoms.json()
-        top_three_diseases = result_symptoms.get("top_three_diseases")
-
-        # Display the result from the server
-        if top_three_diseases:
-            st.subheader("Top Three Predicted Diseases:")
-            for i, disease in enumerate(top_three_diseases):
-                st.write(f"{i+1}. {disease}")
-        else:
-            st.write("No diseases were predicted.")
 if uploaded_image is not None:
     # Send the image to the FastAPI server for prediction
     files = {'file': ('image.jpg', uploaded_image.read(), 'image/jpeg')}
